@@ -10,7 +10,15 @@ function MainCard(props) {
             alt="weather-pic"
             className="w-16 h-16 mr-2"
           ></img>
-          <p className="text-5xl">{props.temperature} °</p>
+          <div className="flex flex-col justify-center">
+            {" "}
+            <p className="text-5xl">{props.temperature} °</p>
+            {props.min_temp !== "" ? (
+              <p className="text-3xl text-slate-500 ml-2">{props.min_temp} °</p>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
         <div className="text-slate-600 text-xs">
           {props.precip !== "" ? (

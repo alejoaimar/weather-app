@@ -61,6 +61,9 @@ function App() {
             temperature={current.max_temp.c}
             image={current.iconURL}
             comment={current.comment}
+            min_temp={
+              typeof current.min_temp !== "undefined" ? current.min_temp.c : ""
+            }
           />
           <div className="flex justify-center">
             {weatherData.next_days.map((next_day, index) => {
